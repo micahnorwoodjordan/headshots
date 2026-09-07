@@ -1,3 +1,9 @@
+# dirs
 .venv/
+artifacts/
 
+# file types
 *.safetensors
+
+# individual files
+.env
