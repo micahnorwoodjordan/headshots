@@ -1,4 +1,5 @@
 import os
+import base64
 from huggingface_hub import InferenceClient
 
 
@@ -21,7 +22,18 @@ with open(INPUT_PATH, "rb") as image_file:
    input_image = image_file.read()
 
 
-image = client.image_to_image(input_image, prompt=PROMPT, model=REPO_ID)
+image = client.image_to_image(
+    input_image,
+    prompt=PROMPT,
+    model=REPO_ID,
+    images=[base64.b64encode(input_image).decode("utf-8")],
+    loras=[
+        {
+            "path": REPO_ID,
+            "scale": 1
+        }
+    ],
+)
 
 if os.path.exists(OUTPUT_PATH):
     os.remove(OUTPUT_PATH)
