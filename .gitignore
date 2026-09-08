@@ -1,9 +1,11 @@
 # dirs
 .venv/
+.venv-3.13/
 artifacts/
 
 # file types
 *.safetensors
+*.pyc
 
 # individual files
 .env
