@@ -22,3 +22,7 @@
 - ***accurate***: ?
 - ***fast***: < 5s inference
 - ***cheap***: < $20 / month
+
+## determining an appropriate model
+
+- `huggingface.co` allows you to test models on inference providers of your choice
