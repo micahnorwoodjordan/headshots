@@ -9,3 +9,5 @@ artifacts/
 .env
 .python-version
 *.pyc
+*.jpg
+*.jpeg
