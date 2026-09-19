@@ -8,6 +8,9 @@ artifacts/
 # individual files
 .env
 .python-version
+
+dump.txt
+
 *.pyc
 *.jpg
 *.jpeg
